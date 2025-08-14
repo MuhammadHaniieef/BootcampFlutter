@@ -1,0 +1,84 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "type_data",
+            "cwd": "Tugas-2-type_data\\type_data",
+            "request": "launch",
+            "type": "dart"
+        },
+        {
+            "name": "loop_function",
+            "cwd": "Tugas-3-loop_and_function\\loop_function",
+            "request": "launch",
+            "type": "dart"
+        },
+        {
+            "name": "tugas_3b_function",
+            "cwd": "Tugas-3-loop_and_function\\tugas_3b_function",
+            "request": "launch",
+            "type": "dart"
+        },
+        {
+            "name": "tugas_4_list_and_map",
+            "cwd": "Tugas-4-List_dan_map\\tugas_4_list_and_map",
+            "request": "launch",
+            "type": "dart"
+        },
+        {
+            "name": "tugas_5_oop",
+            "cwd": "Tugas-5-OOP\\tugas_5_oop",
+            "request": "launch",
+            "type": "dart"
+        },
+        {
+            "name": "tugas6",
+            "cwd": "Tugas-6-AsyncAwaitFuture\\tugas6",
+            "request": "launch",
+            "type": "dart"
+        },
+        {
+            "name": "tugas_7",
+            "cwd": "Tugas-7-intro_flutter\\tugas_7",
+            "request": "launch",
+            "type": "dart"
+        },
+        {
+            "name": "tugas_7 (profile mode)",
+            "cwd": "Tugas-7-intro_flutter\\tugas_7",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "profile"
+        },
+        {
+            "name": "tugas_7 (release mode)",
+            "cwd": "Tugas-7-intro_flutter\\tugas_7",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "release"
+        },
+        {
+            "name": "tugas8_widgetcore",
+            "cwd": "Tugas-8-Widget\\tugas8_widgetcore",
+            "request": "launch",
+            "type": "dart"
+        },
+        {
+            "name": "tugas8_widgetcore (profile mode)",
+            "cwd": "Tugas-8-Widget\\tugas8_widgetcore",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "profile"
+        },
+        {
+            "name": "tugas8_widgetcore (release mode)",
+            "cwd": "Tugas-8-Widget\\tugas8_widgetcore",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "release"
+        }
+    ]
+}
