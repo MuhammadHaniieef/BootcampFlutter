@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:tugas9_styling_flutter/core/custom/style/app_assets.dart';
+import 'package:tugas9_styling_flutter/pages/news/detail/detail_news_page.dart';
 
 class MainContent extends StatelessWidget {
   final PageController pageController;
@@ -26,49 +27,79 @@ class MainContent extends StatelessWidget {
             itemBuilder: (_, i) {
               return Padding(
                 padding: EdgeInsets.symmetric(horizontal: i == 0 ? 20 : 10),
-                child: ClipRRect(
+                child: InkWell(
                   borderRadius: BorderRadius.circular(22),
-                  child: Stack(
-                    fit: StackFit.expand,
-                    children: [
-                      Image.asset(AppAssets.swipeImage, fit: BoxFit.cover),
-                      Container(
-                        decoration: const BoxDecoration(
-                          gradient: LinearGradient(
-                            begin: Alignment.topCenter,
-                            end: Alignment.bottomCenter,
-                            colors: [Colors.transparent, Colors.black54, Colors.black87],
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (_) => DetailNewsPage(
+                          args: DetailNewsArgs(
+                            title:
+                                'Microsoft launches a deepfake detector tool ahead of US election',
+                            category: 'Technology',
+                            author: 'Samuel Newton',
+                            date: '17 June, 2023 — 4:48 PM',
+                            imagePath: AppAssets.detailImage,
+                            body:
+                                "In the last couple of years, we’ve seen new teams in tech companies emerge that focus on responsible innovation, digital well-being, AI ethics or humane use. Whatever their titles, these individuals are given the task of …",
                           ),
                         ),
                       ),
-                      Positioned(
-                        top: 14,
-                        left: 14,
-                        child: Container(
-                          padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 6),
-                          color: Colors.black.withOpacity(.7),
-                          child: const Text(
-                            'TECHNOLOGY',
-                            style: TextStyle(color: Colors.white, fontSize: 11, fontWeight: FontWeight.bold),
+                    );
+                  },
+                  child: ClipRRect(
+                    borderRadius: BorderRadius.circular(22),
+                    child: Stack(
+                      fit: StackFit.expand,
+                      children: [
+                        Image.asset(AppAssets.swipeImage, fit: BoxFit.cover),
+                        Container(
+                          decoration: const BoxDecoration(
+                            gradient: LinearGradient(
+                              begin: Alignment.topCenter,
+                              end: Alignment.bottomCenter,
+                              colors: [
+                                Colors.transparent,
+                                Colors.black54,
+                                Colors.black87
+                              ],
+                            ),
                           ),
                         ),
-                      ),
-                      Positioned(
-                        bottom: 58,
-                        left: 16,
-                        right: 16,
-                        child: const Text(
-                          'Microsoft launches a deepfake detector tool ahead of US election',
-                          style: TextStyle(
-                            color: Colors.white,
-                            fontSize: 18,
-                            fontWeight: FontWeight.w800,
+                        Positioned(
+                          top: 14,
+                          left: 14,
+                          child: Container(
+                            padding: const EdgeInsets.symmetric(
+                                horizontal: 10, vertical: 6),
+                            color: Colors.black.withOpacity(.7),
+                            child: const Text(
+                              'TECHNOLOGY',
+                              style: TextStyle(
+                                  color: Colors.white,
+                                  fontSize: 11,
+                                  fontWeight: FontWeight.bold),
+                            ),
                           ),
-                          maxLines: 3,
-                          overflow: TextOverflow.ellipsis,
                         ),
-                      ),
-                    ],
+                        const Positioned(
+                          bottom: 58,
+                          left: 16,
+                          right: 16,
+                          child: Text(
+                            'Microsoft launches a deepfake detector tool ahead of US election',
+                            style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 18,
+                              fontWeight: FontWeight.w800,
+                            ),
+                            maxLines: 3,
+                            overflow: TextOverflow.ellipsis,
+                          ),
+                        ),
+                      ],
+                    ),
                   ),
                 ),
               );

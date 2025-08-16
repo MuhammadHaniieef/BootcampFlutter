@@ -1,0 +1,11 @@
+# Pastikan device terdeteksi
+adb devices
+
+# (Opsional) bersihkan install lama
+adb -s badc2be9 uninstall com.example.tugas9_styling_flutter
+
+# Paksa install ke user 0 (mengatasi restricted user/profile)
+adb -s badc2be9 install -r -d --user 0 build\app\outputs\flutter-apk\app-debug.apk
+
+
+flutter run -d badc2be9
