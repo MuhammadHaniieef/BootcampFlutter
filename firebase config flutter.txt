@@ -1,0 +1,32 @@
+# Masukkan npm global & dart pub bin ke PATH sesi ini
+$env:Path = "$env:APPDATA\npm;$env:LOCALAPPDATA\Pub\Cache\bin;$env:Path"
+
+# Cek sudah kebaca
+firebase --version
+flutterfire --version
+
+# (kalau belum login) login dulu
+firebase login
+
+# Lalu configure
+flutterfire configure --project flutter-dev-new --platforms=android,ios,web
+
+
+
+permanen
+
+# Tambahkan Roaming\npm ke PATH User
+$npmPath  = "$env:APPDATA\npm"
+$userPath = [Environment]::GetEnvironmentVariable("Path","User")
+if ($userPath -notlike "*$npmPath*") {
+  [Environment]::SetEnvironmentVariable("Path", "$userPath;$npmPath", "User")
+}
+
+# Tambahkan Pub\Cache\bin ke PATH User
+$pubBin   = "$env:LOCALAPPDATA\Pub\Cache\bin"
+$userPath = [Environment]::GetEnvironmentVariable("Path","User")
+if ($userPath -notlike "*$pubBin*") {
+  [Environment]::SetEnvironmentVariable("Path", "$userPath;$pubBin", "User")
+}
+
+# Tutup SEMUA terminal & VS Code, lalu buka terminal baru
