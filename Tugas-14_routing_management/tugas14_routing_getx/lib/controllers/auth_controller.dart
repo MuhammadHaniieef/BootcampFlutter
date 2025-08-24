@@ -7,7 +7,6 @@ class AuthController extends GetxController {
   final AuthService auth;
   AuthController(this.auth);
 
-  // Form controllers
   final emailC = TextEditingController();
   final passC  = TextEditingController();
   final confirmPassC = TextEditingController();
@@ -17,21 +16,15 @@ class AuthController extends GetxController {
 
   @override
   void onReady() {
-    // Dengarkan status login → arahkan otomatis
-    auth.onAuthStateChanged.listen((user) {
-      if (user == null) {
-        // belum login
-        // biarkan tetap di halaman sekarang (get started / login)
-      } else {
-        // sudah login → ke home
-        if (Get.currentRoute != Routes.home) {
-          Get.offAllNamed(Routes.home);
-        }
+    auth.onAuthStateChanged.listen((u) {
+      if (u != null && Get.currentRoute != Routes.home) {
+        Get.offAllNamed(Routes.home);
       }
     });
     super.onReady();
   }
 
+  // ==== dipanggil di login_page.dart: controller.login ====
   Future<void> login() async {
     if (emailC.text.isEmpty || passC.text.isEmpty) {
       Get.snackbar('Oops', 'Email dan password wajib diisi');
@@ -48,6 +41,7 @@ class AuthController extends GetxController {
     }
   }
 
+  // ==== dipanggil di register_page.dart: controller.register ====
   Future<void> register() async {
     if (emailC.text.isEmpty || passC.text.isEmpty) {
       Get.snackbar('Oops', 'Email dan password wajib diisi');
@@ -63,6 +57,20 @@ class AuthController extends GetxController {
       Get.offAllNamed(Routes.home);
     } catch (e) {
       Get.snackbar('Daftar gagal', e.toString(), snackPosition: SnackPosition.BOTTOM);
+    } finally {
+      isLoading.value = false;
+    }
+  }
+
+  // ==== tombol Google ====
+  Future<void> loginWithGoogle() async {
+    isLoading.value = true;
+    try {
+      await auth.signInWithGoogle();
+      Get.offAllNamed(Routes.home);
+    } catch (e) {
+      Get.snackbar('Google Sign-In gagal', e.toString(),
+          snackPosition: SnackPosition.BOTTOM);
     } finally {
       isLoading.value = false;
     }

@@ -12,7 +12,12 @@
           "package_name": "com.example.tugas12_firebase"
         }
       },
-      "oauth_client": [],
+      "oauth_client": [
+        {
+          "client_id": "509613163524-tad8l4qcrn4ue4tlcrngukahtl2ensdd.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
       "api_key": [
         {
           "current_key": "AIzaSyD4rC2_V2kjably0yTOlmaomUTwbOp9hhE"
@@ -20,7 +25,19 @@
       ],
       "services": {
         "appinvite_service": {
-          "other_platform_oauth_client": []
+          "other_platform_oauth_client": [
+            {
+              "client_id": "509613163524-tad8l4qcrn4ue4tlcrngukahtl2ensdd.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "509613163524-bn54rku115dn0ef8iq06o5jk7itgas39.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.tugas14RoutingGetx"
+              }
+            }
+          ]
         }
       }
     },
@@ -31,7 +48,20 @@
           "package_name": "com.example.tugas14_routing_getx"
         }
       },
-      "oauth_client": [],
+      "oauth_client": [
+        {
+          "client_id": "509613163524-7jm2e25uiel516f44ju56le6s3vcrum3.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.tugas14_routing_getx",
+            "certificate_hash": "2896f6fdb1cb590561918d06330ec3148aa2ccff"
+          }
+        },
+        {
+          "client_id": "509613163524-tad8l4qcrn4ue4tlcrngukahtl2ensdd.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
       "api_key": [
         {
           "current_key": "AIzaSyD4rC2_V2kjably0yTOlmaomUTwbOp9hhE"
@@ -39,7 +69,19 @@
       ],
       "services": {
         "appinvite_service": {
-          "other_platform_oauth_client": []
+          "other_platform_oauth_client": [
+            {
+              "client_id": "509613163524-tad8l4qcrn4ue4tlcrngukahtl2ensdd.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "509613163524-bn54rku115dn0ef8iq06o5jk7itgas39.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.tugas14RoutingGetx"
+              }
+            }
+          ]
         }
       }
     }

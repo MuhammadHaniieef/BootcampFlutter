@@ -53,10 +53,11 @@ class LoginPage extends GetView<AuthController> {
               const SizedBox(height: 16),
               const DividerWithText(text: 'Atau masuk menggunakan'),
               const SizedBox(height: 16),
-              GoogleButton(onPressed: () {
-                // Tambahkan Google Sign-In jika diinginkan. Sekarang UI saja.
-                Get.snackbar('Info', 'Google Sign-In belum diaktifkan');
-              }),
+              // GoogleButton(onPressed: () {
+              //   // Tambahkan Google Sign-In jika diinginkan. Sekarang UI saja.
+              //   Get.snackbar('Info', 'Google Sign-In belum diaktifkan');
+              // }),
+              GoogleButton(onPressed: controller.loginWithGoogle),
               const SizedBox(height: 24),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,

@@ -50,9 +50,10 @@ class RegisterPage extends GetView<AuthController> {
               const SizedBox(height: 16),
               const DividerWithText(text: 'Atau daftar menggunakan'),
               const SizedBox(height: 16),
-              GoogleButton(onPressed: () {
-                Get.snackbar('Info', 'Google Sign-In belum diaktifkan');
-              }),
+              // GoogleButton(onPressed: () {
+              //   Get.snackbar('Info', 'Google Sign-In belum diaktifkan');
+              // }),
+              GoogleButton(onPressed: controller.loginWithGoogle),
               const SizedBox(height: 16),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
